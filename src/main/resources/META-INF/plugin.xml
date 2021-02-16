@@ -1,0 +1,33 @@
+<idea-plugin>
+  <id>xiaoxi666.remove.comments</id>
+  <name>remove.comments</name>
+  <version>1.0</version>
+  <vendor url=""/>
+
+  <description><![CDATA[移除代码中的单行注释(LineComment)和块注释(BlockComment)，保留Javadoc注释(JavadocComment)。并格式化代码。]]></description>
+
+  <change-notes><![CDATA[]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <!-- 这里设置了最小的版本号 -->
+  <idea-version since-build="4267"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="removeComments" class="core.RemoveCommentsAction" text="Remove comments" description="Remove comments">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>

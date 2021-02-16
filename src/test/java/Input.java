@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
+/**
+ * @author xiaoxi666
+ * @date 2021-02-15 17:13
+ * 我是 Javadoc 注释
+ */
+public class Input {
+    /**
+     * 我是 Javadoc 注释
+     *
+     * @param param1
+     * @param param2
+     */
+    public static void someMethod(String param1, String param2
+    ) {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        String s1 = "// 我是字符串中的内容，不是注释";
+        String s2 = "/* 我是字符串中的内容，不是注释 */";
+        String s3 = "/** 我是字符串中的内容，不是注释 */";
+        new ArrayList<>().stream()
+            .filter(f -> f.hashCode() != 0)
+            .collect(Collectors.toList());
+    }
+}
