@@ -41,7 +41,6 @@ public final class CommentsRemover {
         List<Comment> comments = compilationUnit.getAllContainedComments();
         List<Comment> unwantedComments = comments
             .stream()
-            .distinct()
             .filter(CommentsRemover::isValidCommentType)
             .collect(Collectors.toList());
         unwantedComments.forEach(Node::remove);
