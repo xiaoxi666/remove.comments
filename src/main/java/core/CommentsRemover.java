@@ -58,7 +58,7 @@ public final class CommentsRemover {
     }
 
     /**
-     * 我们只识别单行注释和块注释
+     * 我们只识别单行注释和块注释，如果要去除javadoc，在BlockComment后面加上|| comment instanceof JavadocComment
      *
      * @param comment
      * @return true if meet the correct type
